@@ -60,7 +60,7 @@ private:
     size_t m_Capacity = 0;
 
     void ReAlloc(size_t newCapacity) {
-        //1,allo new block of memory
+        //1,allocate new block of memory
         //2. copy/move old elemnte into new block
         //3. delete
 
@@ -164,4 +164,10 @@ public:
         Clear();
         ::operator delete(m_Data, m_Capacity * sizeof(T));
     }
+};
+
+template <>
+class Vector<bool> {
+
+    
 };
